@@ -115,6 +115,7 @@
     border:none;
     padding:5px 10px;
     background-color: #f6f7ff;
+    box-shadow: inset 0 0 5px 2px rgba(0, 0, 0, 0.4);
 }
 .editTodo:focus{
     outline: none;

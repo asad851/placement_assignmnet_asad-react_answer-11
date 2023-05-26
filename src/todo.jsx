@@ -1,4 +1,4 @@
-import React, { useEffect, useReducer, useRef } from "react";
+import React, {  useReducer, useRef } from "react";
 import { useState } from "react";
 import { IoCheckmarkDoneCircleOutline } from "react-icons/io5";
 
@@ -42,7 +42,7 @@ export default function Todo() {
   const [inputText, setInputText] = useState("");
   const [completed, setCompleted] = useState(false);
   const [updatedText, setUpdatedText] = useState("");
-  const inputBar = useRef()
+  const inputBar = useRef(null)
   const [todos, dispatch] = useReducer(reducer, []);
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -57,7 +57,7 @@ export default function Todo() {
     todos.completed=completed?false:true
   }
   const editbtn =(id)=>{
-      
+    
       
       dispatch({ type: ACTIONS.EDIT_TODO, payload: {id } });
     // console.log(boo)
